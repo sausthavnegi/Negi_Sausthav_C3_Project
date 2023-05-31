@@ -49,7 +49,32 @@ class RestaurantTest {
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>Total Amount<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void get_the_total_of_Sweet_corn_soup_119_and_Vegetable_Lasagne_269(){
+        //WRITE UNIT TEST CASE HERE
+        List<String>item_list =new ArrayList<>() ;
+        item_list.add("Sweet corn soup");
+        item_list.add("Vegetable lasagne");
 
+        Double total= restaurant.getTotalAmount(item_list);
+        assertEquals(388.0,total);
+
+    }
+    @Test
+    public void get_the_total_of_Sweet_corn_soup_119_and_Sizzling_brownie_319(){
+        //WRITE UNIT TEST CASE HERE
+        List<String>item_list =new ArrayList<>() ;
+        item_list.add("Sweet corn soup");
+        item_list.add("Sizzling brownie");
+
+        Double total= restaurant.getTotalAmount(item_list);
+        assertEquals(438.0,total);
+
+    }
+
+
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>Total Amount<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     public void adding_item_to_menu_should_increase_menu_size_by_1(){
