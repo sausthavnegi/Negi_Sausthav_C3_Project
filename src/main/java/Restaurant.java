@@ -29,6 +29,18 @@ public class Restaurant {
 
     }
 
+    public double getTotalAmount(List<String> items){
+        Double total=0.0;
+        for(String item:items ) {
+            for (Item menu_item : menu) {
+                if (menu_item.getName().equals(item)) {
+                    total += menu_item.getPrice();
+                }
+            }
+        }
+        return  total;
+    }
+
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
 
     public List<Item> getMenu() {
